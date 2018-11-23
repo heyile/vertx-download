@@ -17,7 +17,7 @@ public class HttpServerDownloadTest {
             request.bodyHandler(body -> {
                 System.out.println("server : " + body.toString());
             });
-            String file = "E:\\vertx\\vertx-download\\src\\main\\java\\com\\rkd\\from.txt";
+            String file = "src\\main\\java\\com\\rkd\\from.txt";
             request.response().headers().set("Content-Disposition", "attachment;filename=tempFileEntity.txt");
             request.response().sendFile(file);
         });
